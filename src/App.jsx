@@ -14,10 +14,14 @@ useEffect(()=>{
 ))
   return (
  <div>
+  <h1 className='font-extrabold text-center text-amber-500 m-5'>Movies Api</h1>
   <SearchBar search={search} setSearch={setSearch}/>
-  {filtered.map(movie=>(
+  <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 '>
+   {filtered.map(movie=>(
     <MovieCard key={movie.id} movie={movie}/>
   ))}
+  </div>
+  
  </div>
   
   )
